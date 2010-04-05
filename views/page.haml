@@ -1,0 +1,37 @@
+.breadcrumb
+  %p
+    %a{ :href => "/" }= @site_title
+    - if @page.parent
+      &gt;
+      %a{ :href => @page.parent.abspath }= @page.parent.heading
+
+#content
+  ~ @page.to_html
+  - if @page.date
+    .date= format_date(@page.date)
+
+  - unless @page.pages.empty?
+    %h2.articles= "Pages filed under #{@page.heading}"
+      
+  - @page.pages.each do |page|
+    = haml :summary, :layout => false, :locals => { :article => page, :heading => :h3 }
+
+  - unless @page.articles.empty?
+    %h2.articles= "Articles filed under #{@page.heading}"
+  
+  - @page.articles.each do |article|
+    = haml :summary, :layout => false, :locals => { :article => article, :heading => :h3 }
+
+  - unless @page.categories.empty?
+    .categories
+      Filed under
+      - @page.categories.each do |category|
+        %a{ :href => category.abspath }= category.heading
+
+  = haml :comments, :layout => false
+        
+#sidebar
+  = haml :categories, :layout => false
+  = haml :feed, :layout => false
+        
+= haml :footer, :layout => false, :locals => { :social => true }

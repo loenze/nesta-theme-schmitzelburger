@@ -1,0 +1,14 @@
+%h1
+  %a{ :href => base_url, :title => @heading }= @heading
+  //= @heading
+  //%small= @subtitle
+
+#content
+  - @articles.each do |article|
+    = haml :summary, :layout => false, :locals => { :article => article, :heading => :h2 }
+    
+#sidebar
+  = haml :categories, :layout => false
+  = haml :feed, :layout => false
+
+= haml :footer, :layout => false, :locals => { :social => false }
