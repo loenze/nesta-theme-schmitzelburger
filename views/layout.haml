@@ -10,7 +10,7 @@
     - if request.user_agent =~ /(Mobile\/.+Safari)/
       %meta{ :name => "viewport", :content => "height=device-height; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0;" }
       %link{ :href => "/css/mobile.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
-      %script{ :src => "/script/iphone.js", :type => "text/javascript" }
+      %script{ :src => "/schmitzelburger/script/iphone.js", :type => "text/javascript" }
     - else
       %link{ :href => "/css/master.css", :media => "screen", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "/articles.xml", :rel => "alternate", :type => "application/atom+xml" }

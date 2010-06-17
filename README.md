@@ -9,7 +9,7 @@ Unfortunately I never found the time to put it to good use. Until now I guess.
 
 The header image used on the sample page may not be redistributed, hence I had to remove it from the theme.
 The original can be found at [sxc.hu](http://www.sxc.hu/photo/1184005).
-A quick replacement has been uploaded as public/img/head.png.
+A quick replacement has been uploaded as public/schmitzelburger/img/head.png.
 I know it's not as beautiful as the old one, but I assume people will replace it anyways.
 
 This design has only been tested on Firefox/Mac, Safari/Mac and my iPhone.
