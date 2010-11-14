@@ -1,8 +1,9 @@
 # Use the app.rb file to load Ruby code, modify or extend the models, or
 # do whatever else you fancy when the theme is loaded.
 
-# This code tells Nesta to look for assets in the theme's public folder.
-# Highly recommended if your theme contains images or JavaScript.
-#
-use Rack::Static, :urls => ["/schmitzelburger"],
-                  :root => "themes/schmitzelburger/public"
+module Nesta
+  class App
+    use Rack::Static, :urls => ["/schmitzelburger"],
+      :root => "themes/schmitzelburger/public"
+  end
+end
