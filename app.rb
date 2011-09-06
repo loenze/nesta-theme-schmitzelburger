@@ -5,5 +5,11 @@ module Nesta
   class App
     use Rack::Static, :urls => ["/schmitzelburger"],
       :root => "themes/schmitzelburger/public"
+
+    helpers do
+      def body_class
+        (request.path == "/") ? "#{@body_class} home" : @body_class
+      end
+    end
   end
 end

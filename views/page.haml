@@ -6,7 +6,7 @@
       %a{ :href => @page.parent.abspath }= @page.parent.heading
 
 #content
-  ~ @page.to_html
+  ~ @page.to_html(self)
   - if @page.date
     .date= format_date(@page.date)
 
