@@ -1,17 +1,22 @@
-!base_color = #555
-!pale_color = #777
+$base_color: #555
 
-!pre_background = #222
-!code_color = #fefefe
-!pre_border = #999
+$pale_color: #777
 
-!border = 1px "solid" #ccc
+$pre_background: #222
 
-!sans_serif = "Trebuchet MS, Tahoma, Verdana, sans-serif"
-!serif = "Georgia, serif"
-!fixed = "Monaco, Bitstream Vera Sans Mono, Courier New"
+$code_color: #fefefe
 
-!sidebar_color = #96b4d0
+$pre_border: #999
+
+$border: 1px solid #ccc
+
+$sans_serif: Trebuchet MS, Tahoma, Verdana, sans-serif
+
+$serif: Georgia, serif
+
+$fixed: Monaco, Bitstream Vera Sans Mono, Courier New
+
+$sidebar_color: #96b4d0
 
 *
   margin: 0
@@ -19,7 +24,7 @@
   font-size: 15px
 
 body
-  background: #222
+  background: #222222
 
 #container
   margin: 1em 0 2em 0
@@ -35,7 +40,7 @@ body
   border-top: 1em solid #fefefe
 
 #content
-  border-right: 0px solid #ccc
+  border-right: 0px solid #cccccc
   padding: 0 1.5em
   float: left
   width: 44em
@@ -50,64 +55,56 @@ body.home #sidebar
   margin-bottom: 1em
   padding-top: 1em
   margin-left: 48em
-  
   h2
     margin-top: 2em
     &:first-child
       margin-top: 0
-  
   h2, ol, p, ul
-    color = !pale_color
-    font-family = !sans_serif
+    color: $pale_color
+    font-family: $sans_serif
     font-size: 100%
-    
   h2
-    color = !base_color
-
+    color: $base_color
   ol, ul
     margin: 1em 0
     padding: 0
     list-style: none
-    
     li
       margin: 0.45em 0
-      
     a
       font-size: 85%
       display: block
       text-decoration: none
-      background = !sidebar_color + #111
+      background: $sidebar_color + #111
       padding: 0.25em 0 0.25em 0.5em
       font-weight: normal
-      color = !sidebar_color - #333
+      color: $sidebar_color - #333
       &:hover
-        color = !sidebar_color - #333
-        background = !sidebar_color + #1a1a1a
+        color: $sidebar_color - #333
+        background: $sidebar_color + #1a1a1a
         text-decoration: none
-  
   div.feed
     margin: 1.5em 0
-    border-top = !border
-    border-color = !sidebar_color + #222
-    border-bottom = 0
+    border-top: $border
+    border-color: $sidebar_color + #222
+    border-bottom: 0
 
 p.social, div.feed
-  color = !pale_color
-  font-family = !sans_serif
+  color: $pale_color
+  font-family: $sans_serif
   font-size: 75%
 
 div.feed
   margin: 0.5em 0
   padding-top: 1.5em
   padding-bottom: 1.5em
-  
   a
     padding: 6px 0 6px 36px
     background: url(/schmitzelburger/img/feed-icon.png) no-repeat left center
 
 h1, h2, h3, h4, h5, h6, p, div.breadcrumb
-  color: #333
-  font-family = !sans_serif
+  color: #333333
+  font-family: $sans_serif
 
 h1, h2, h3, h4, h5, h6
   a:hover
@@ -117,16 +114,15 @@ body.home
   h1
     margin: 0
     padding-bottom: 0em
-    color = #fefefe
+    color: #fefefe
     text-align: left
     font-size: 400%
     background: url(/schmitzelburger/img/head.png) no-repeat top center
     height: 5em
     line-height: 1
     overflow: hidden
-    
     a
-      color = #fefefe
+      color: #fefefe
       text-align: left
       font-size: 100%
       text-decoration: none
@@ -139,162 +135,144 @@ body.home
 
 h2.articles
   margin-bottom: -0.2em
-  border-top = !border
+  border-top: $border
   padding-top: 0.3em
   font-size: 100%
   font-weight: normal
-  color: #aaa
+  color: #aaaaaa
 
 div.breadcrumb
   margin-bottom: 2em
   font-size: 100%
-  font-family = !sans_serif
-  
+  font-family: $sans_serif
+
 div.breadcrumb
   margin: 0
   padding: 0
   background: url(/schmitzelburger/img/head.png) no-repeat bottom center
-
   p
     margin: 0
-    color = #fefefe
+    color: #fefefe
     text-align: left
     font-size: 150%
     padding: 3em 0.5em 0.5em 1em
     line-height: 1
     overflow: hidden
     background: url(/schmitzelburger/img/overlay.png) repeat-y 31.35em
-    
     a
-      color = #fefefe
+      color: #fefefe
       text-align: left
       font-size: 100%
       text-decoration: none
       line-height: 1
       background: none
-  
+
 div.date
   margin-top: 1.5em
-  font-family = !sans_serif
+  font-family: $sans_serif
   font-size: 75%
-  color = !pale_color + #444
+  color: $pale_color + #444
 
 #content
   p.read_more
     text-align: right
-    font-family = !sans_serif
+    font-family: $sans_serif
     font-size: 75%
     display: none
-    
     a
       font-size: 100%
-
   img
     margin: 0.75em 0 1.5em 0
-    border: 1px solid #ccc
+    border: 1px solid #cccccc
     padding: 2px
-
   blockquote
     margin: 1.5em 5%
     padding: 0.75em
-    background = #eee
-    
+    background: #eee
     p
       margin: 0
-
     cite
       display: block
       text-align: right
-  
   div.categories
     margin: 2em 0 1em 0
     padding: 0.8em 8px 0.85em 38px
     background: #f3f3f3 url(/schmitzelburger/img/category-icon.png) no-repeat 8px 51%
-    color = !pale_color
-    font-family = !sans_serif
+    color: $pale_color
+    font-family: $sans_serif
     font-size: 75%
-    
     a
       margin-left: 0.5em
       font-size: 100%
-  
   code, pre
-    color = !code_color
-    background-color = !pre_background + #020202
+    color: $code_color
+    background-color: $pre_background + #020202
     padding: 0.3em 0.4em 0.4em 0.4em
-    font-family = !fixed
+    font-family: $fixed
     font-size: 85%
-  
   pre
     margin: 1.5em 0
-    border-left = 3px "solid" !pre_border
+    border-left: 3px solid $pre_border
     padding: 0.7em 0 0.7em 0.9em
     overflow: auto
-
     code
       border: none
       padding: 0
-      
       span
         font-size: 100%
         line-height: 1.5
-      
     .ruby
       .normal
         font-style: normal
       .comment
-        color: #5F5A60
+        color: #5f5a60
         font-style: italic
       .keyword
-        color: #CDA869
+        color: #cda869
       .method
-        color: #9B703F
+        color: #9b703f
       .class
-        color: #9B703F
+        color: #9b703f
       .module
-        color: #9B703F
+        color: #9b703f
       .punct
-        color: #FDFDFD
+        color: #fdfdfd
       .symbol
-        color: #9B859D
+        color: #9b859d
       .string
-        color: #8F9D6A
+        color: #8f9d6a
       .char
-        color: #FEFEFE
+        color: #fefefe
       .ident
-        color: #FEFEFE
+        color: #fefefe
       .constant
-        color: #CF6A4C
+        color: #cf6a4c
       .regex
-        color: #E9C062
+        color: #e9c062
       .number
-        color: #F99
+        color: #ff9999
       .attribute
-        color: #7587A6
+        color: #7587a6
       .global
-        color: #9B859D
+        color: #9b859d
       .expr
-        color: #9B859D
+        color: #9b859d
       .escape
-        color: #CF7D34
-  
+        color: #cf7d34
   div.old-comments
     h2
-      border-top = !border
+      border-top: $border
       padding-top: 0.5em
     ol
       padding-left: 0
       list-style: none
       font-size: 90%
-      
       li
         margin-bottom: 1em
-        border-bottom = !border
+        border-bottom: $border
         padding-bottom: 0.7em
-        
         p.meta
-          color = !base_color
-
+          color: $base_color
           span
             font-weight: bold
             color: black
@@ -303,7 +281,6 @@ h1
   margin: 0.5em 0 0.5em 0
   font-size: 220%
   letter-spacing: -1px
-
   small
     display: block
     font-size: 40%
@@ -311,13 +288,13 @@ h1
 
 h2, h3, h4, h5, h6
   margin: 1em 0 0.5em 0
-  
+
 h2
   font-size: 150%
-  
+
 h3
   font-size: 120%
-  
+
 h2, h3
   a
     font-size: 100%
@@ -333,7 +310,7 @@ ol li, ul li
   margin-bottom: 0.5em
 
 ol, p, ul
-  font-family = !sans_serif
+  font-family: $sans_serif
   line-height: 135%
   color: black
 
@@ -342,12 +319,12 @@ ul, ol
 
 a
   text-decoration: underline
-  color: #44a
+  color: #4444aa
   &:visited
-    color: #44a
+    color: #4444aa
   &:hover
-    background: #44a
-    color: #fff
+    background: #4444aa
+    color: white
     text-decoration: none
 
 hr
@@ -355,15 +332,14 @@ hr
   height: 3px
   overflow: hidden
   border: 0
-  border-bottom = !border
+  border-bottom: $border
 
 #footer
   clear: both
   margin: 0 18.5em 0 0
-  border-top = !border
-  border-color = !sidebar_color 
+  border-top: $border
+  border-color: $sidebar_color
   padding: 0.5em 0 0.7em 1.5em
-  
   .social
     float: right
     width: auto
@@ -371,21 +347,18 @@ hr
     padding-top: 0
     padding-bottom: 1.5em
     vertical-align: middle
-  
     img
       margin: 0 0 0 5px
       border: none
-
   p
     text-align: left
-    font-family = !sans_serif
+    font-family: $sans_serif
     font-size: 75%
-    color = !pale_color + #444
+    color: $pale_color + #444
     padding: 0
     margin: 0
-    
     a
       font-size: 100%
       text-decoration: none
-      color = !pale_color + #222
+      color: $pale_color + #222
       background: none
